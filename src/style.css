@@ -39,13 +39,13 @@ option:nth-child(even) {
   justify-content: space-between;
   align-items: center;
 }
+
 .cards_text {
   display: flex;
   margin-inline: auto;
   margin-left: 200px;
   height: 665px;
   position: absolute;
- 
 }
 
 .circle {
@@ -81,7 +81,6 @@ option:nth-child(even) {
 
 .wrap {
   margin: 0 auto;
-  /*/ background-color: aqua;/*/
   margin-left: 440px;
   margin-top: 15px;
   height: 180px;

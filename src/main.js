@@ -13,7 +13,7 @@ import {
 
 
 
-const pokemonList = data.pokemon.slice(0, 10);
+const pokemonList = data.pokemon;
 let pokeCard = document.getElementById('cards-sem-carosel');
 
 const displayPokes = (pokemonData) => {
