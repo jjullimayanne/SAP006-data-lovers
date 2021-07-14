@@ -427,55 +427,34 @@ ul {
 
 @media (min-width: 768px) and (max-width: 1024px) {
 
-
-  .container-carousel {
-    margin-left: 10px;
-    
-  }
-
-  #ordemGeracao {
-    margin-bottom: 500px;
-    width: 150px;
-    height: 30px;
-    margin-bottom: 20px;
-    border-radius: 15px;
-  }
-
-  .wrap {
-    margin-left: 400px;
-    margin-bottom: 9440px;
-  
-  }
-
- 
-  .circle {
-    display: flex;
-    opacity: 0;
-  }
-  .cards_text {
-    display: flex;
-    margin-inline: auto;
-    margin-left: 100px;
-    height: 665px;
-    position: absolute;
-   
-  }
-}
-
-@media (min-width: 440px) and (max-width: 768px) {
   #cards-sem-carosel {
-    grid-template-columns: 210px 210px;
-    margin-top: -9850px;
-    margin-left: 100px;
+    grid-template-columns: 210px 210px 210px;
+    grid-template-rows: 320px 320px 320px;
+    margin-top: -9750px;
+    margin-left: -10px;
     grid-row-gap: 20px;
     grid-column-gap: 50px;
   }
 
-  .wrap {
-    width: 500px;
-    height: 90px;
-    margin-top: -180px;
-    margin-left: 110px;
+  .text, .typeStats{
+    margin-left: 15px;
+    font-size: 14px;
+  }
+
+  .typeStats{
+    margin-top: 240px;
+  }
+
+  .textbox{
+    width: 600px;
+    height: 100px;
+    margin-top: -115px;
+    margin-left: 80px;
+  }
+
+  .textbox p{
+    font-size: 20px;
+    text-align: center;
   }
 
   .circle {
@@ -531,39 +510,50 @@ ul {
   }
 
   .line {
-    width: 100px;
+    width: 120px;
     border-right: 10px solid black;
   }
 
   #perfil {
     margin-top: 30px;
+    margin-left: 20px;
     width: 70px;
     height: 70px;
   }
 
   .seletores {
-    width: 100px;
-    margin-top: 400px;
+    width: 110px;
+    margin-top: 200px;
+    margin-left: -5px;
   }
 
   .seletor {
-    width: 70px;
+    width: 100px;
     padding: 2px;
-    font-size: 14px;
+    font-size: 10px;
   }
 
   .info_icon {
-    margin-left: -75px;
+    margin-left: -65px;
+    margin-top: 590px;
   }
 
   a {
     margin-top: -18px;
   }
 
+  .wrap {
+    height: 100px;
+    width: 890px;
+    margin-top: 10px;
+    margin-left: 100px;
+  }
+
   #ordemGeracao {
     width: 100px;
     height: 20px;
-    font-size: 8px;
+    font-size: 10px;
+    margin-left: 22px;
   }
 
   .container-carousel {
@@ -573,6 +563,161 @@ ul {
   #previous,
   #next {
     height: 20px;
+    margin-left: 20px;
+  }
+
+  .slider {
+    height: 60px;
+  }
+
+  .pictures {
+    width: 50px;
+    height: 50px;
+  }
+
+  .name-geracao {
+    padding-left: 20px;
+  }
+}
+
+@media (min-width: 440px) and (max-width: 767px) {
+  #cards-sem-carosel {
+    grid-template-columns: 210px 210px;
+    grid-template-rows: 320px 320px 320px;
+    margin-top: -9750px;
+    margin-left: -10px;
+    grid-row-gap: 20px;
+    grid-column-gap: 50px;
+  }
+
+  .text, .typeStats{
+    margin-left: 15px;
+    font-size: 14px;
+  }
+
+  .typeStats{
+    margin-top: 240px;
+  }
+
+  .textbox{
+    width: 400px;
+    height: 100px;
+    margin-top: -115px;
+    margin-left: 65px;
+  }
+
+  .textbox p{
+    font-size: 20px;
+    text-align: center;
+  }
+
+  .circle {
+    display: none;
+  }
+
+  .card {
+    width: 230px;
+    height: 320px;
+  }
+
+  .gridContainerUp {
+    grid-template-rows: 20px 1px 110px 10px;
+  }
+
+  .gridContainerDown {
+    grid-template-rows: 75px 1px 82px;
+  }
+
+  .title {
+    padding: 3px;
+    font-size: 12px;
+  }
+
+  .number {
+    padding: 3px;
+    font-size: 10px;
+  }
+
+  .sideInfo {
+    padding: 0px;
+    font-size: 8px;
+  }
+
+  .backgroundImg {
+    width: 210px;
+    height: 120px;
+  }
+
+  .attackList,
+  .typeList,
+  .weakList,
+  .resistList {
+    font-size: 9.5px;
+    padding: 5px;
+  }
+
+  .attacks,
+  .type,
+  .weak,
+  .resistant {
+    font-size: 8px;
+  }
+
+  .line {
+    width: 120px;
+    border-right: 10px solid black;
+  }
+
+  #perfil {
+    margin-top: 30px;
+    margin-left: 20px;
+    width: 70px;
+    height: 70px;
+  }
+
+  .seletores {
+    width: 110px;
+    margin-top: 200px;
+    margin-left: -5px;
+  }
+
+  .seletor {
+    width: 100px;
+    padding: 2px;
+    font-size: 10px;
+  }
+
+  .info_icon {
+    margin-left: -65px;
+    margin-top: 590px;
+  }
+
+  a {
+    margin-top: -18px;
+  }
+
+  .wrap {
+    height: 100px;
+    width: 690px;
+    margin-top: 10px;
+    margin-left: 100px;
+  }
+
+  #ordemGeracao {
+    width: 100px;
+    height: 20px;
+    font-size: 10px;
+    margin-left: 22px;
+  }
+
+  .container-carousel {
+    height: 80px;
+  }
+
+  #previous,
+  #next {
+    height: 20px;
+    margin-left: 20px;
   }
 
   .slider {
@@ -593,9 +738,30 @@ ul {
   #cards-sem-carosel {
     grid-template-columns: 210px;
     grid-template-rows: 320px 320px 320px;
-    margin-top: -9850px;
-    margin-left: 100px;
+    margin-top: -9750px;
+    margin-left: -90px;
     grid-row-gap: 20px;
+  }
+
+  .text, .typeStats{
+    margin-left: 15px;
+    font-size: 14px;
+  }
+
+  .typeStats{
+    margin-top: 240px;
+  }
+
+  .textbox{
+    width: 200px;
+    height: 100px;
+    margin-top: -115px;
+    margin-left: 30px;
+  }
+
+  .textbox p{
+    font-size: 15px;
+    text-align: center;
   }
 
   .circle {
@@ -651,29 +817,32 @@ ul {
   }
 
   .line {
-    width: 100px;
+    width: 120px;
     border-right: 10px solid black;
   }
 
   #perfil {
     margin-top: 30px;
+    margin-left: 20px;
     width: 70px;
     height: 70px;
   }
 
   .seletores {
-    width: 100px;
-    margin-top: 400px;
+    width: 110px;
+    margin-top: 200px;
+    margin-left: -5px;
   }
 
   .seletor {
-    width: 70px;
+    width: 100px;
     padding: 2px;
-    font-size: 14px;
+    font-size: 10px;
   }
 
   .info_icon {
-    margin-left: -75px;
+    margin-left: -65px;
+    margin-top: 590px;
   }
 
   a {
@@ -681,16 +850,17 @@ ul {
   }
 
   .wrap {
-    height: 90px;
+    height: 100px;
     width: 245px;
-    margin-top: -180px;
-    margin-left: 110px;
+    margin-top: 10px;
+    margin-left: 100px;
   }
 
   #ordemGeracao {
     width: 100px;
     height: 20px;
-    font-size: 8px;
+    font-size: 10px;
+    margin-left: 22px;
   }
 
   .container-carousel {
@@ -700,6 +870,7 @@ ul {
   #previous,
   #next {
     height: 20px;
+    margin-left: 20px;
   }
 
   .slider {
