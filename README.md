@@ -5,14 +5,14 @@
 - [1. Preâmbulo](#1-preâmbulo)
 - [2. Resumo](#2-resumo)
 - [3. Tema](#3-tema)
-- [4. Como funciona?](#4-como-funciona-?)
+- [4. Como funciona?](#4-como-funciona)
 - [5. Protótipos](#5-protótipos)
 - [6. Histórias de Usuário](#6-histórias-de-usuário)
 - [7. Testes de Usabilidade](#7-testes-de-usabilidade)
 - [8. Checklist](#8-checklist)
 
 ---
-![alt text](https://github.com/nessacl-95/SAP006-data-lovers/blob/src/assets/computer.png)
+
 ## 1. Preâmbulo
 
 Segundo a [Forbes](https://www.forbes.com/sites/bernardmarr/2018/05/21/how-much-data-do-we-create-every-day-the-mind-blowing-stats-everyone-should-read) 90% dos dados que existem hoje foram gerados durante os últimos dois anos. A cada dia geramos 2.5 milhões de terabytes de dados, uma cifra sem precedentes.
@@ -21,7 +21,6 @@ Apesar disso, os dados por si só são de pouca utilidade. Para que essas grande
 
 Na imagem seguinte, você pode ver como os dados que estão na parte esquerda podem ser usados para construir a interface amigável e compreensível que está na parte direita.
 
-![json-interface]
 
 ## 2. Resumo
 
@@ -53,41 +52,41 @@ As informações dos pokemons estão distribuídas pela interface em cards enfil
 
 - Exibir os pokemons filtrados pelo tipo e a porcentagem de pokemons do tipo selecionado.
 
-<img src="filtrar-por-tipo" alt="Botão para filtrar pelo tipo">
+<img src="filtrar-por-tipo.gif" alt="Botão para filtrar pelo tipo">
 
 - Além da possibilidade de utilizar um slider superior em que os pokemons são exibidos de acordo com a geração selecionada pelo usuário.
 
-<img src="filtrar-por-geracao" alt="Botão para filtrar pelas gerações">
+<img src="filtrar-por-geracao.gif" alt="Botão para filtrar pelas gerações">
 
 ## 5. Protótipos e layout final
 
 Utilizamos a ferramenta Figma para produzir os protótipos. Inicialmente a exibição dos cards era feita em apenas um grande carrossel na interface, porém, optamos por exibi-los listados na página para favorecer a usabilidade da aplicação. 
 
-- Protótipo inicial de baixa fidelidade:
+### Protótipo inicial de baixa fidelidade:
 
 <img src="protótipo-1.png" alt="Protótipo inicial de baixa fidelidade">
 
-- Segundo protótipo de baixa fidelidade:
+### Segundo protótipo de baixa fidelidade:
 
 <img src="prototipo-2.png" alt="Segundo protótipo de baixa fidelidade">
 
-- Protótipo dos cards:
+### Protótipo dos cards:
 
 <img src="prototipo-card.png" alt="Protótipo dos cards">
 
-- Resultado final dos cards:
+### Resultado final dos cards:
 
 <img src="resultadofinal-card.png" alt="Cards finais">
 
-- Aplicação para desktop:
+### Aplicação para desktop:
 
 <img src="versao-desktop.png" alt="Versão desktop">
 
-- Aplicação para tablet:
+### Aplicação para tablet:
 
 <img src="versao-tablet.png" alt="Versão tablet">
 
-- Aplicação mobile:
+### Aplicação mobile:
 
 <img src="versao-mobile.png" alt="Versão mobile">
 
