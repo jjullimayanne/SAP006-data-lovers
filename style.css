@@ -12,40 +12,46 @@
   font-family: "Roboto", "Pixel", sans-serif;
 }
 
-option:nth-child(odd) {
-  background: #c52018;
-}
-option:nth-child(even) {
-  background: #fff200;
-}
-
-.line {
-  background-color: #c52018;
-  position: relative;
-  height: 100%;
+.dashboard {
+  width: 218px;
+  height: 100vh;
   display: flex;
-  width: 250px;
+  flex-direction: column;
+  position: fixed;
+  align-items: center;
+  background-color: #c52018;
   border-right: 20px solid #292929;
   z-index: 1;
 }
 
-#telaPrincipal {
-  width: 100px;
-  height: 10000px;
-  display: flex;
-  position: relative;
-  flex-wrap: nowrap;
-  flex-flow: nowrap;
-  justify-content: space-between;
-  align-items: center;
+h1{
+  width: 800px;
+  height: auto;
+  margin-top: 200px;
+  margin-bottom: 60px;
+  text-align: center;
+  font-family: Pixels;
+  text-shadow: 1px 2px #861611
 }
 
-.cards_text {
+.dash-title{
   display: flex;
-  margin-inline: auto;
-  margin-left: 200px;
-  height: 665px;
-  position: absolute;
+  flex-direction: row;
+  margin-top: 10px;
+}
+
+.dash-icon{
+  width: 40px;
+  height: 40px;
+}
+
+h3{
+  font-size: 21px;
+  font-family: Pixels;
+  display: inline;
+  margin-top: 5px;
+  color: white;
+  padding: 4px;
 }
 
 .circle {
@@ -55,8 +61,8 @@ option:nth-child(even) {
   border-radius: 50%;
   background-color: #292929;
   margin-left: 170px;
-  margin-bottom: 8700px;
-  position: absolute;
+  margin-top: 230px;
+  position: fixed;
   z-index: 2;
 }
 
@@ -70,6 +76,8 @@ option:nth-child(even) {
 }
 
 .border {
+  display: flex;
+  justify-content: center;
   margin-inline: auto;
   margin-top: 6px;
   background-color: whitesmoke;
@@ -79,15 +87,53 @@ option:nth-child(even) {
   border-radius: 50%;
 }
 
+a{
+  align-self: center;
+}
+
+.text, .typeStats{
+  color: white;
+  font-family: "Pixels";
+  text-align: center;
+  font-size: 20px;
+}
+
+.typeStats{
+  margin-top: 60px;
+}
+
+.perfil {
+  width: 100px;
+  height: 100px;
+  border-radius: 50px;
+  margin-top: 20px;
+}
+
+.buttonfunction {
+  width: 160px;
+  height: 240px;
+  margin-top: 40px;
+}
+
+.seletor {
+  border-radius: 5px;
+  cursor: pointer;
+  padding: 10px;
+  margin-bottom: 20px;
+  display: flex;
+  border: 3px solid black;
+  width: 160px;
+  height: 40px;
+}
+
 .wrap {
   margin: 0 auto;
-  margin-left: 440px;
   margin-top: 15px;
   height: 180px;
-  width: 1450px;
+  width: 84%;
   position: absolute;
   overflow: hidden;
-  z-index: 1;
+  align-items: center;
 }
 
 .pictures {
@@ -107,19 +153,12 @@ option:nth-child(even) {
   );
 }
 
-.textbox {
+.main-screen{
   display: flex;
-  width: 1500px;
-  height: 50px;
-  position: absolute;
-  z-index: 2;
-  margin-top: -80px;
-  margin-left: -100px;
-}
-
-.textbox p {
-  font-size: 30px;
-  font-family: Pixels;
+  flex-direction: column;
+  align-items: center;
+  width: 84%;
+  margin-left: 220px;
 }
 
 .card {
@@ -145,18 +184,6 @@ option:nth-child(even) {
   display: inline-block;
   margin-left: 20px;
   flex-shrink: 0;
-}
-
-.text, .typeStats{
-  color: white;
-  font-family: "Pixels";
-  text-align: center;
-  margin-left: 50px;
-  font-size: 20px;
-}
-
-.typeStats{
-  margin-top: 400px;
 }
 
 .gridContainerUp {
@@ -291,56 +318,14 @@ option:nth-child(even) {
   grid-column: 2;
 }
 
-ul {
-  margin-inline: auto;
-  list-style: none;
-  padding: 20px;
-}
-
-#perfil {
-  margin-top: 10px;
-  width: 100px;
-  height: 100px;
-  margin-left: 60px;
-  border-radius: 50px;
-}
-
-.seletores {
-  width: 160px;
-  height: 160px;
+.card-container {
   display: flex;
-  position: absolute;
-  margin-inline: auto;
-  justify-content: space-evenly;
-  flex-direction: column;
-  margin-top: 300px;
-  margin-left: 15px;
-}
-
-.seletor {
-  border-radius: 5px;
-  cursor: pointer;
-  padding: 10px;
-  margin: 10px;
-  display: flex;
-  border: 2px solid white;
-  width: 160px;
-  height: 80px;
-}
-
-#cards-sem-carosel {
-  
-  display: grid;
-  grid-template-columns: 180px 180px 180px;
-  grid-template-rows: 280px 280px 280px 280px;
-  grid-column-gap: 150px;
-  grid-row-gap: 150px;
-  margin-top: -9700px;
-  margin-left: 500px;
-  width: 500px;
-  height: 500px;
+  width: 100%;
+  height: auto;
   margin-right: 0;
-
+  flex-wrap: wrap;
+  gap: 25px;
+  justify-content: center;
 }
 
 #ordemGeracao {
@@ -416,143 +401,149 @@ ul {
 }
 
 .info_icon {
-  display: flex;
-  position: relative;
-  z-index: 2;
   cursor: pointer;
-  margin-top: 850px;
-  margin-left: -80px;
 }
 
-@media (min-width: 768px) and (max-width: 1024px) {
+@media (max-width: 1000px){
 
-  #cards-sem-carosel {
-    grid-template-columns: 210px 210px 210px;
-    grid-template-rows: 320px 320px 320px;
-    margin-top: -9750px;
-    margin-left: -10px;
-    grid-row-gap: 20px;
-    grid-column-gap: 50px;
+  .card-container{
+    width: 100%;
+    gap: 22px;
   }
 
-  .text, .typeStats{
-    margin-left: 15px;
-    font-size: 14px;
+  .card{
+    margin-left: 0px;
   }
 
-  .typeStats{
-    margin-top: 240px;
+  .main-screen{
+    width: 80%;
+    margin-left: 150px;
   }
 
-  .textbox{
+  #dashboard{
+    width: 150px;
+    border-right: 10px solid #292929;
+  }
+
+  .dash-title{
+    margin-top: 5px;
+    margin-left: 5px;
+  }
+
+  .dash-icon{
+    margin-top: 10px;
+  }
+
+  h3{
+    margin-top: 0px;
+  }
+
+  .perfil{
+    width: 80px;
+    height: 80px;
+    margin-top: 10px;
+  }
+
+  .text{
+    font-size: 18px;
+  }
+
+  .typeStats {
+    margin-top: 50px;
+  }
+
+  .buttonfunction{
+    width: 130px;
+    height: 240px;
+    margin-top: 70px;
+  }
+
+  .seletor{
+    border: 2px solid black;
+    margin-bottom: 15px;
+    width: 130px;
+  }
+
+  .circle{
+    margin-left: 105px;
+    margin-top: 220px;
+  }
+
+  .wrap{
+    width: 80%;
+  }
+
+  h1{
     width: 600px;
-    height: 100px;
-    margin-top: -115px;
-    margin-left: 80px;
   }
 
-  .textbox p{
-    font-size: 20px;
-    text-align: center;
+}
+
+@media (min-width: 360px) and (max-width: 767px){
+
+  .card-container{
+    width: 100%;
+  }
+
+  #dashboard{
+    width: 100%;
+    height: 120px;
+    flex-direction: row;
+    justify-content: space-around;
+    border-right: none;
+    border-bottom: 10px solid #292929;
+  }
+
+  .dash-title{
+    flex-direction: column-reverse;
+    align-items: center;
+    margin-left: 5px;
+    margin-top: 0px;
+  }
+
+  .dash-icon{
+    width: 30px;
+    height: 30px;
+  }
+
+  .perfil, .text{
+    display: none;
+  }
+
+  .main-screen{
+    margin-left: 0px;
+    width: 100%;
+  }
+
+  h1{
+    width: 300px;
+    font-size: 18px;
+    margin-top: 240px;
+    margin-bottom: 30px;
+  }
+
+  h3{
+    font-size: 17px;
+    height: 50px;
+    width: 70px;
   }
 
   .circle {
     display: none;
   }
 
-  .card {
-    width: 230px;
-    height: 320px;
-  }
-
-  .gridContainerUp {
-    grid-template-rows: 20px 1px 110px 10px;
-  }
-
-  .gridContainerDown {
-    grid-template-rows: 75px 1px 82px;
-  }
-
-  .title {
-    padding: 3px;
-    font-size: 12px;
-  }
-
-  .number {
-    padding: 3px;
-    font-size: 10px;
-  }
-
-  .sideInfo {
-    padding: 0px;
-    font-size: 8px;
-  }
-
-  .backgroundImg {
-    width: 210px;
-    height: 120px;
-  }
-
-  .attackList,
-  .typeList,
-  .weakList,
-  .resistList {
-    font-size: 9.5px;
-    padding: 5px;
-  }
-
-  .attacks,
-  .type,
-  .weak,
-  .resistant {
-    font-size: 8px;
-  }
-
-  .line {
-    width: 120px;
-    border-right: 10px solid black;
-  }
-
-  #perfil {
-    margin-top: 30px;
-    margin-left: 20px;
-    width: 70px;
-    height: 70px;
-  }
-
-  .seletores {
-    width: 110px;
-    margin-top: 200px;
-    margin-left: -5px;
-  }
-
-  .seletor {
-    width: 100px;
-    padding: 2px;
-    font-size: 10px;
-  }
-
-  .info_icon {
-    margin-left: -65px;
-    margin-top: 590px;
-  }
-
-  a {
-    margin-top: -18px;
-  }
-
   .wrap {
-    height: 100px;
-    width: 890px;
-    margin-top: 10px;
-    margin-left: 100px;
+    height: 115px;
+    width: 100%;
+    margin-top: 110px;
+    z-index: 0;
   }
 
   #ordemGeracao {
-    width: 100px;
-    height: 20px;
-    font-size: 10px;
-    margin-left: 22px;
+    width: 115px;
+    height: 25px;
+    font-size: 11px;
+    margin-top: 20px;
   }
 
   .container-carousel {
@@ -577,311 +568,29 @@ ul {
   .name-geracao {
     padding-left: 20px;
   }
-}
 
-@media (min-width: 440px) and (max-width: 767px) {
-  #cards-sem-carosel {
-    grid-template-columns: 210px 210px;
-    grid-template-rows: 320px 320px 320px;
-    margin-top: -9750px;
-    margin-left: -10px;
-    grid-row-gap: 20px;
-    grid-column-gap: 50px;
+  .buttonfunction{
+    width: 250px;
+    height: 100px;
+    display: flex;
+    margin-top: 5px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
   }
 
-  .text, .typeStats{
-    margin-left: 15px;
-    font-size: 14px;
+  .seletor{
+    border: 2px solid black;
+    width: 107px;
+    height: 25px;
+    margin-bottom: 10px;
+    font-size: 11px;
+    padding: 2px;
   }
 
   .typeStats{
-    margin-top: 240px;
-  }
-
-  .textbox{
-    width: 400px;
-    height: 100px;
-    margin-top: -115px;
-    margin-left: 65px;
-  }
-
-  .textbox p{
-    font-size: 20px;
-    text-align: center;
-  }
-
-  .circle {
-    display: none;
-  }
-
-  .card {
-    width: 230px;
-    height: 320px;
-  }
-
-  .gridContainerUp {
-    grid-template-rows: 20px 1px 110px 10px;
-  }
-
-  .gridContainerDown {
-    grid-template-rows: 75px 1px 82px;
-  }
-
-  .title {
-    padding: 3px;
-    font-size: 12px;
-  }
-
-  .number {
-    padding: 3px;
-    font-size: 10px;
-  }
-
-  .sideInfo {
-    padding: 0px;
-    font-size: 8px;
-  }
-
-  .backgroundImg {
-    width: 210px;
-    height: 120px;
-  }
-
-  .attackList,
-  .typeList,
-  .weakList,
-  .resistList {
-    font-size: 9.5px;
-    padding: 5px;
-  }
-
-  .attacks,
-  .type,
-  .weak,
-  .resistant {
-    font-size: 8px;
-  }
-
-  .line {
-    width: 120px;
-    border-right: 10px solid black;
-  }
-
-  #perfil {
-    margin-top: 30px;
-    margin-left: 20px;
-    width: 70px;
-    height: 70px;
-  }
-
-  .seletores {
-    width: 110px;
-    margin-top: 200px;
-    margin-left: -5px;
-  }
-
-  .seletor {
-    width: 100px;
-    padding: 2px;
-    font-size: 10px;
-  }
-
-  .info_icon {
-    margin-left: -65px;
-    margin-top: 590px;
-  }
-
-  a {
-    margin-top: -18px;
-  }
-
-  .wrap {
-    height: 100px;
-    width: 690px;
-    margin-top: 10px;
-    margin-left: 100px;
-  }
-
-  #ordemGeracao {
-    width: 100px;
-    height: 20px;
-    font-size: 10px;
-    margin-left: 22px;
-  }
-
-  .container-carousel {
-    height: 80px;
-  }
-
-  #previous,
-  #next {
-    height: 20px;
-    margin-left: 20px;
-  }
-
-  .slider {
-    height: 60px;
-  }
-
-  .pictures {
-    width: 50px;
-    height: 50px;
-  }
-
-  .name-geracao {
-    padding-left: 20px;
-  }
-}
-
-@media (min-width: 360px) and (max-width: 439px) {
-  #cards-sem-carosel {
-    grid-template-columns: 210px;
-    grid-template-rows: 320px 320px 320px;
-    margin-top: -9750px;
-    margin-left: -90px;
-    grid-row-gap: 20px;
-  }
-
-  .text, .typeStats{
-    margin-left: 15px;
-    font-size: 14px;
-  }
-
-  .typeStats{
-    margin-top: 240px;
-  }
-
-  .textbox{
-    width: 200px;
-    height: 100px;
-    margin-top: -115px;
-    margin-left: 30px;
-  }
-
-  .textbox p{
-    font-size: 15px;
-    text-align: center;
-  }
-
-  .circle {
-    display: none;
-  }
-
-  .card {
-    width: 230px;
-    height: 320px;
-  }
-
-  .gridContainerUp {
-    grid-template-rows: 20px 1px 110px 10px;
-  }
-
-  .gridContainerDown {
-    grid-template-rows: 75px 1px 82px;
-  }
-
-  .title {
-    padding: 3px;
-    font-size: 12px;
-  }
-
-  .number {
-    padding: 3px;
-    font-size: 10px;
-  }
-
-  .sideInfo {
-    padding: 0px;
-    font-size: 8px;
-  }
-
-  .backgroundImg {
-    width: 210px;
-    height: 120px;
-  }
-
-  .attackList,
-  .typeList,
-  .weakList,
-  .resistList {
-    font-size: 9.5px;
-    padding: 5px;
-  }
-
-  .attacks,
-  .type,
-  .weak,
-  .resistant {
-    font-size: 8px;
-  }
-
-  .line {
-    width: 120px;
-    border-right: 10px solid black;
-  }
-
-  #perfil {
-    margin-top: 30px;
-    margin-left: 20px;
-    width: 70px;
-    height: 70px;
-  }
-
-  .seletores {
-    width: 110px;
-    margin-top: 200px;
-    margin-left: -5px;
-  }
-
-  .seletor {
-    width: 100px;
-    padding: 2px;
-    font-size: 10px;
-  }
-
-  .info_icon {
-    margin-left: -65px;
-    margin-top: 590px;
-  }
-
-  a {
-    margin-top: -18px;
-  }
-
-  .wrap {
-    height: 100px;
-    width: 245px;
-    margin-top: 10px;
-    margin-left: 100px;
-  }
-
-  #ordemGeracao {
-    width: 100px;
-    height: 20px;
-    font-size: 10px;
-    margin-left: 22px;
-  }
-
-  .container-carousel {
-    height: 80px;
-  }
-
-  #previous,
-  #next {
-    height: 20px;
-    margin-left: 20px;
-  }
-
-  .slider {
-    height: 60px;
-  }
-
-  .pictures {
-    width: 50px;
-    height: 50px;
-  }
-
-  .name-geracao {
-    padding-left: 20px;
+    margin-top: 0px;
+    margin-bottom: 10px;
+    font-size: 11px;
   }
 }
