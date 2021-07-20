@@ -1,22 +1,21 @@
 import data from './data/pokemon/pokemon.js';
 
-
 import {
   filtrarPelaGeracao,
   ordenarPorNum,
   ordenarPorNome,
   filterType,
   sortCp,
-  typeStats
+  typeStats,
+  filterName,
+  sortFilter
 } from './data.js';
 
-
-
-
 const pokemonList = data.pokemon;
-let pokeCard = document.getElementById('cards-sem-carosel');
+let pokeCard = document.getElementById("card-container");
 
 const displayPokes = (pokemonData) => {
+
 
   pokemonData.map((elem) => {
 
@@ -32,7 +31,7 @@ const displayPokes = (pokemonData) => {
 
     })
 
-    pokeCard.innerHTML += `<div class="card" id="card">
+      return pokeCard.innerHTML += `<div class="card" id="card">
         <div class="gridContainerUp" id="gridContainerUp"> 
           <div class="title"> ${elem.name.toUpperCase()}</div>
           <div class="number">#${elem.num}</div>
@@ -66,15 +65,37 @@ const displayPokes = (pokemonData) => {
       </div>
     </div>
 `;
+
   });
+
 };
 displayPokes(pokemonList);
+
+const field = document.getElementById("search")
+let autoCompleteValues;
+
+field.addEventListener("input", ({target}) =>{
+  const fieldContent = target.value.toLowerCase()
+  let filterPokes = document.getElementById("card-container")
+   
+  if(fieldContent.length){
+    filterPokes.innerHTML = ''
+    autoCompleteValues = filterName(pokemonList, fieldContent)
+    sortFilter(autoCompleteValues)
+    displayPokes(autoCompleteValues)
+
+  } else{
+    filterPokes.innerHTML = ''
+    displayPokes(pokemonList)
+  }
+  
+});
 
 
 let selecionarPorTipo;
 const filtrar = document.getElementById("tipoPokemon");
 filtrar.addEventListener('change', () => {
-  const getpokes = document.getElementById('cards-sem-carosel');
+  const getpokes = document.getElementById("card-container");
   getpokes.innerHTML = '';
   selecionarPorTipo = filtrar.value;
 
@@ -85,7 +106,7 @@ filtrar.addEventListener('change', () => {
 let ordenarMaxCp;
 const ordenarPorCP = document.getElementById("maxcp");
 ordenarPorCP.addEventListener('change', () => {
-  const orderpokes = document.getElementById('cards-sem-carosel')
+  const orderpokes = document.getElementById("card-container")
   orderpokes.innerHTML = '';
   ordenarMaxCp = ordenarPorCP.value;
 
@@ -96,7 +117,7 @@ ordenarPorCP.addEventListener('change', () => {
 let ordernarPorNumeros;
 const ordenar = document.getElementById("num");
 ordenar.addEventListener('change', () => {
-  const getpokes = document.getElementById('cards-sem-carosel');
+  const getpokes = document.getElementById("card-container");
   getpokes.innerHTML = '';
   ordernarPorNumeros = ordenar.value;
 
@@ -109,7 +130,7 @@ ordenar.addEventListener('change', () => {
 let ordenarPorNomes;
 const ordenarNomes = document.getElementById("name");
 ordenarNomes.addEventListener('change', () => {
-  const getpokes = document.getElementById('cards-sem-carosel');
+  const getpokes = document.getElementById("card-container");
   getpokes.innerHTML = '';
   ordenarPorNomes = ordenarNomes.value;
 
@@ -160,9 +181,6 @@ ordenarGeracao.addEventListener('change', () => {
 const nextEl = document.getElementById('next');
 const previousEl = document.getElementById('previous');
 const sliderEl = document.getElementById('slider')
-
-
-
 
 function onNextClick() {
 

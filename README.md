@@ -33,11 +33,63 @@ O tema escolhido para a aplicação foi o popular jogo mobile Pokemon Go em que 
 
 ## 4. Como funciona?
 
-As informações dos pokemons estão distribuídas pela interface em cards enfileirados que possuem as seguintes informações: nome, número, HP (health points), CP (combat points), imagem, peso, altura, ataques especiais, tipos dos ataques especiais, fraquezas e resistências do pokemon. O principal modo de navegação da aplicação é uma dashboard lateral onde estão localizadas as funcionalidades que definirão o modo como os cards são exibidos na tela. As seguintes funcionalidades foram implementadas: o usuário pode filtrar os pokemons pelo tipo, ordenar numericamente e alfabeticamente, ordenar o CP (combat power) dos pokemons em ordem crescente ou decrescente, além da possibilidade de utilizar um slider superior em que os pokemons são exibidos de acordo com a geração pokemon selecionada pelo usuário.
+As informações dos pokemons estão distribuídas pela interface em cards enfileirados que possuem as seguintes informações: nome, número, HP (health points), CP (combat points), imagem, peso, altura, ataques especiais, tipos dos ataques especiais, fraquezas e resistências do pokemon. O principal modo de navegação da aplicação é uma dashboard lateral onde estão localizadas as funcionalidades que definirão o modo como os cards são exibidos na tela. As seguintes funcionalidades foram implementadas: 
 
-## 5. Protótipos
+- O usuário pode filtrar os pokemons pelo tipo por meio de uma barra de pesquisa. Os pokemons serão ordenados de acordo com a sequência das letras inseridas.
 
-A proposta inicial era a exibição dos cards em apenas um grande carrossel na interface, porém, optamos por exibi-los listados na página para favorecer a usabilidade da aplicação. A partir do primeiro protótipo de baixa fidelidade desenvolvemos a aplicação e realizamos as devidas alterações no layout de modo a atingir o resultado final.
+<img src="filtrar-por-nome.gif" alt="Barra de pesquisa para filtrar pokemons pelo nome">
+
+- Ordenar os cards numericamente de 001-251 ou de 251-001.
+
+<img src="ordem-numerica.gif" alt="Botão para selecionar a ordem númerica">
+
+- Ordenar os cards alfabeticamente de A-Z ou de Z-A.
+
+<img src="ordem-alfabetica.gif" alt="Botão para selecionar a ordem afabética">
+
+- Ordenar o CP dos pokemons em ordem crescente ou decrescente.
+
+<img src="ordem-cp.gif" alt="Botão para selecionar a ordem do CP">
+
+- Exibir os pokemons filtrados pelo tipo e a porcentagem de pokemons do tipo selecionado.
+
+<img src="filtrar-por-tipo" alt="Botão para filtrar pelo tipo">
+
+- Além da possibilidade de utilizar um slider superior em que os pokemons são exibidos de acordo com a geração selecionada pelo usuário.
+
+<img src="filtrar-por-geracao" alt="Botão para filtrar pelas gerações">
+
+## 5. Protótipos e layout final
+
+Utilizamos a ferramenta Figma para produzir os protótipos. Inicialmente a exibição dos cards era feita em apenas um grande carrossel na interface, porém, optamos por exibi-los listados na página para favorecer a usabilidade da aplicação. 
+
+- Protótipo inicial de baixa fidelidade:
+
+<img src="protótipo-1.png" alt="Protótipo inicial de baixa fidelidade">
+
+- Segundo protótipo de baixa fidelidade:
+
+<img src="prototipo-2.png" alt="Segundo protótipo de baixa fidelidade">
+
+- Protótipo dos cards:
+
+<img src="prototipo-card.png" alt="Protótipo dos cards">
+
+- Resultado final dos cards:
+
+<img src="resultadofinal-card.png" alt="Cards finais">
+
+- Aplicação para desktop:
+
+<img src="versao-desktop.png" alt="Versão desktop">
+
+- Aplicação para tablet:
+
+<img src="versao-tablet.png" alt="Versão tablet">
+
+- Aplicação mobile:
+
+<img src="versao-mobile.png" alt="Versão mobile">
 
 ## 6. Histórias de usuário
 
@@ -74,8 +126,8 @@ Por fim, algumas dessas constatações já foram implementadas e outras estão s
 - [x] Usar VanillaJS.
 - [x] Não utilizar `this`.
 - [x] Passa pelo linter (`npm run pretest`)
-- [ ] Passa pelos testes (`npm test`)
-- [ ] Testes unitários cobrem um mínimo de 70% de statements, functions, lines e branches.
+- [x] Passa pelos testes (`npm test`)
+- [x] Testes unitários cobrem um mínimo de 70% de statements, functions, lines e branches.
 - [x] Inclui uma _definição de produto_ clara e informativa no `README.md`.
 - [x] Inclui histórias de usuário no `README.md`.
 - [x] Inclui rascunho da solução (protótipo de baixa fidelidade) no `README.md`.

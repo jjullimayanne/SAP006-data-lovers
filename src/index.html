@@ -4,45 +4,27 @@
 <head>
   <meta charset="utf-8">
   <title>Poke Lovers</title>
-  <link rel="stylesheet" href="style.css"/>
-  <link rel="shortcut icon" href="https://www.pikpng.com/pngl/m/135-1358145_pokeball-pixel-art-pokeball-hd-png-download.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css" />
+  <link rel="shortcut icon"
+    href="./assets/pokeballl.png">
 </head>
 
 <body>
 
-  <div class="wrap">
+  <aside class="dashboard" id="dashboard">
 
-    <select id="ordemGeracao" autocomplete="off">
-      <option value="all">Selecione a geração</option>
-      <option value="kanto">I</option>
-      <option value="johto">II</option>
-    </select>
-
-    <div class="container-carousel">
-      <span id="previous"><i data-feather="chevron-left"></i></span>
-      <span id="next"><i data-feather="chevron-right"></i></span>
-      <div id="slider" class="slider"></div>
-    </div>
-
-  </div>
-
-  <nav id="telaPrincipal">
-
-    <nav class="line">
-
-      <div class="perfil">
-        <img id="perfil" src="https://8bitocrafts.files.wordpress.com/2013/03/pokemon-red-sprite2.jpg">
-        <p class="text">Bem-vindo treinador pokemon!</p>
-        <div class="typeStats" id="typeStats">Selecione um tipo de Pokemon!</div>
+      <div class="dash-title">
+        <img class="dash-icon" src="./assets/pokeballl.png">
+        <h3>Poke Lovers</h3>
       </div>
+      <img class="perfil" src="https://8bitocrafts.files.wordpress.com/2013/03/pokemon-red-sprite2.jpg">
+      <h3 class="text">Bem-vindo treinador pokemon!</h3>
+      
 
-      <nav>
-        <ul>
-          <li class="info_icon"><a href="contatos.html"><i data-feather="info"></i></a></li>
-        </ul>
-      </nav>
+      <nav class="buttonfunction">
 
-      <div class="seletores">
+        <input type="text" id="search" class="seletor" autocomplete="off" placeholder="Busque um Pokemon!">
 
         <select class="seletor" id="tipoPokemon" autocomplete="off">
           <option value="">Filtrar por tipo</option>
@@ -70,7 +52,7 @@
 
         <select class="seletor" name="" id="num" autocomplete="off">
           <option value="all">Ordenar por Número</option>
-          <option value="crescente">Crescente</option>
+          <option value="crescent">Crescente</option>
           <option value="decrescent">Decrescente</option>
         </select>
 
@@ -80,27 +62,41 @@
           <option value="decrescent">Decrescente</option>
         </select>
 
-        
+      </nav>
 
-      </div>
+      <h3 class="typeStats" id="typeStats">Selecione um tipo de Pokemon!</h3>
 
-    </nav>
+  </aside>
 
-    <div class="circle">
-      <div class="white-circle">
-        <div class="border"></div>
-      </div>
-    </div>
-
-  </nav>
-
-  <main class="cards_text">
-
-    <div id="cards-sem-carosel">
-      <div class="textbox" id="textbox">
-        <p id="textCenter">Aqui você encontra as principais informações dos pokemons do mundo de Pokemon GO!</p>
+  <div class="circle">
+    <div class="white-circle">
+      <div class="border">
+        <a href="contatos.html"><i data-feather="info"></i></a>
       </div>
     </div>
+  </div>
+
+  <main class="main-screen">
+
+    <section class="wrap">
+
+      <select id="ordemGeracao" autocomplete="off">
+        <option value="all">Selecione a geração</option>
+        <option value="kanto">I</option>
+        <option value="johto">II</option>
+      </select>
+
+      <div class="container-carousel">
+        <span id="previous"><i data-feather="chevron-left"></i></span>
+        <span id="next"><i data-feather="chevron-right"></i></span>
+        <div id="slider" class="slider"></div>
+      </div>
+
+    </section>
+
+    <h1>Aqui você encontra as principais informações dos pokemons do mundo de Pokemon GO!</h1>
+
+    <section id="card-container" class="card-container"></section>
 
   </main>
 

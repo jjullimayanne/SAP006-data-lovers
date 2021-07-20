@@ -132,11 +132,11 @@ h5{
   padding: 50px;
 }
 
-#github{
+#githubnessa, #githubjulli{
   grid-column: 1;
 }
 
-#linkedin{
+#linkedinnessa, #linkedinjulli{
   grid-column: 2;
 }
 
