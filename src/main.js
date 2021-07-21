@@ -13,11 +13,12 @@ import {
 
 const pokemonList = data.pokemon;
 let pokeCard = document.getElementById("card-container");
+let allPokemonCards;
 
 const displayPokes = (pokemonData) => {
 
 
-  pokemonData.map((elem) => {
+  allPokemonCards = pokemonData.map((elem) => {
 
     let props = elem["special-attack"]
 
@@ -31,7 +32,7 @@ const displayPokes = (pokemonData) => {
 
     })
 
-      return pokeCard.innerHTML += `<div class="card" id="card">
+      return allPokemonCards = `<div class="card" id="card">
         <div class="gridContainerUp" id="gridContainerUp"> 
           <div class="title"> ${elem.name.toUpperCase()}</div>
           <div class="number">#${elem.num}</div>
@@ -67,7 +68,7 @@ const displayPokes = (pokemonData) => {
 `;
 
   });
-
+  pokeCard.innerHTML = allPokemonCards.join("");
 };
 displayPokes(pokemonList);
 
@@ -139,14 +140,16 @@ ordenarNomes.addEventListener('change', () => {
 
 });
 
+let allPokemonGen;
 const pokemonListGeneration = data.pokemon;
 const displayPokesGeneration = (pokemonData) => {
 
 
   const pokeCardGeneration = document.getElementById('slider');
+  
 
-  pokemonData.forEach((elem) => {
-    pokeCardGeneration.innerHTML += `
+  allPokemonGen = pokemonData.map((elem) => {
+    return `
   
        <div>
          <img class="pictures" src=" ${elem.img}"></img>
@@ -159,7 +162,7 @@ const displayPokesGeneration = (pokemonData) => {
       `;
   });
 
-
+  pokeCardGeneration.innerHTML = allPokemonGen.join("")
 };
 
 displayPokesGeneration(pokemonListGeneration);
